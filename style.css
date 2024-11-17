@@ -10,6 +10,13 @@
   color: white;
 }
 
+h2 {
+    font-size: x-large;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 #main-nav nav {
   display: flex;
   justify-content: center;
@@ -98,11 +105,118 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
-    gap: 1rem;
+    margin: 3rem 10rem;
 }
 
 #project-section > div{
     border: 1px solid white;
+}
+
+.section-heading{
+    padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: rgba(237, 68, 12, 0.8);
+    text-shadow: 0px 0px 2px white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.project-item{
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.project-item img{
+    object-fit: contain;
+    max-width: 298px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-details{
+    padding-left: 0.5rem;
+    background: none;
+    color: black;
+}
+.project-details p{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    background-color: inherit;
+    color: inherit;
+}
+
+.project-details p:nth-child(2){
+    font-weight: 600;
+}
+
+.section-heading:nth-of-type(2){
+    color: rgba(25, 104, 240, 0.8);
+}
+
+#experience-section{
+    margin: 3rem auto;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.exp-item{
+    margin-bottom: 1rem;
+}
+
+.exp-item img {
+    max-width: 40px;
+    border-radius: 50px;
+}
+
+.exp-name {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.exp-desc{
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: slategray;
+}
+
+.section-heading:nth-of-type(3){
+    color: rgba(237, 26, 216, 0.8);
+}
+
+#contact-section{
+    margin: 3rem auto;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#contact-section a::before{
+    content: "Email ID: ";
+    color: crimson;
+}
+
+#contact-section a{
+    margin-top: 1rem;
+    color: magenta;
+    text-decoration: none;
+}
+
+#contact-section div{
+    margin-top: 1rem;
+}
+
+#contact-section div i{
+    padding-right: 1rem;
 }
 
 @media (max-width: 700px) {
