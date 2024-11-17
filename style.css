@@ -17,6 +17,10 @@ h2 {
     margin: 0 auto;
 }
 
+#mobile-nav{
+    display: none;
+}
+
 #main-nav nav {
   display: flex;
   justify-content: center;
@@ -66,14 +70,14 @@ h2 {
 }
 
 .exp-logo{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
 }
 
 .exp-logo img{
     max-width: 80px;
-    margin: 0 10px;
+    margin: 0 auto;
     padding: 0.5rem;
     object-fit: contain;
     border: 1px solid white;
@@ -219,8 +223,47 @@ h2 {
     padding-right: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1250px) {
+    #project-section{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 940px) {
     #project-section{
     grid-template-columns: repeat(1, 1fr);
+    }
+
+    #project-section div{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 730px) {
+    #project-section{
+        margin: 3rem;
+    }
+    .exp-logo{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .exp-item{
+        padding: 0 3rem;
+    }
+    #contact-section{
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #main-nav nav {
+        display: none;
+    }
+    #mobile-nav{
+        display: flex;
+        padding: 2rem 0;
+        justify-content: center;
+        background-color: #222222;
+    }
+    #mobile-nav i{
+        margin-left: 2rem;
     }
 }
