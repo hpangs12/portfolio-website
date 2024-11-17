@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+#main-nav nav {
+  display: flex;
+  justify-content: center;
+  background-color: #222222;
+}
+#main-nav nav a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem;
+  background-color: #222222;
+}
+
+#home-section {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+#home-section div {
+    margin: 1rem 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+#home-section div h2 {
+    font-size: x-large;
+    max-width: 400px;
+    margin: -5px auto;
+}
+
+#home-section p{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;
+    max-width: 500px;
+    margin: -5px auto;
+}
+
+#home-section #home-about img{
+    max-width: 250px;
+    border-radius: 300px;
+    padding: 1rem;
+}
+
+#home-section > div {
+    margin: 2rem 0;
+}
+
+.exp-logo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.exp-logo img{
+    max-width: 80px;
+    margin: 0 10px;
+    padding: 0.5rem;
+    object-fit: contain;
+    border: 1px solid white;
+    border-radius: 10px 30px;
+    background-color: white;
+}
+
+@media (max-width: 400px) {
+    .exp-logo img{
+        max-width: 70px;
+        object-fit: cover;
+        border: 1px solid white;
+        border-radius: 10px 30px;
+        background-color: white;
+    }
+}
+
+#contact-details button:nth-child(1){
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: "Poppins";
+    font-weight: bold;
+    margin:  0 0.5rem;
+}
+#contact-details button:nth-child(2){
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: "Poppins";
+    font-weight: bold;
+    margin:  0 0.5rem;
+    border: 1px solid white;
+}
+
+#project-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    gap: 1rem;
+}
+
+#project-section > div{
+    border: 1px solid white;
+}
+
+@media (max-width: 700px) {
+    #project-section{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
