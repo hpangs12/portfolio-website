@@ -59,10 +59,10 @@
 }
 
 .exp-logo{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 
 .exp-logo img{
     max-width: 80px;
@@ -72,16 +72,6 @@
     border: 1px solid white;
     border-radius: 10px 30px;
     background-color: white;
-}
-
-@media (max-width: 400px) {
-    .exp-logo img{
-        max-width: 70px;
-        object-fit: cover;
-        border: 1px solid white;
-        border-radius: 10px 30px;
-        background-color: white;
-    }
 }
 
 #contact-details button:nth-child(1){
