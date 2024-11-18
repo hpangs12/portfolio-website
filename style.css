@@ -266,4 +266,17 @@ h2 {
     #mobile-nav i{
         margin-left: 2rem;
     }
+    #home-section div h2 {
+        font-size: x-large;
+        max-width: 300px;
+        margin: -5px auto;
+    }
+}
+
+@media (max-width: 420px) {
+    #home-section div h2 {
+        font-size: large;
+        max-width: 250px;
+        margin: -5px auto;
+    }
 }
