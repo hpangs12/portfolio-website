@@ -243,7 +243,18 @@ h2 {
         margin: 3rem;
     }
     .exp-logo{
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .exp-logo img{
+        max-width: 80px;
+        margin: 0 auto;
+        padding: 0.3rem;
+        object-fit: contain;
+        border: 1px solid gray;
+        border-radius: none;
+        background-color: white;
     }
     .exp-item{
         padding: 0 3rem;
@@ -265,6 +276,10 @@ h2 {
     }
     #mobile-nav i{
         margin-left: 2rem;
+    }
+    #mobile-nav a{
+        text-decoration: none;
+        background-color: transparent;
     }
     #home-section div h2 {
         font-size: x-large;
