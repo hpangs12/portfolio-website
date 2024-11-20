@@ -226,10 +226,16 @@ h2 {
     background-color: crimson;
     padding: 0.3rem 1rem;
     margin: 0.1rem;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem 0 0 0;
     text-transform: uppercase;
     font-family: "Poppins";
     color: white;
+}
+
+.project-thumbnail{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
 }
 
 @media (max-width: 1250px) {
