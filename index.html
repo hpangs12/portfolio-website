@@ -35,11 +35,22 @@
         </div>
         <div>
             <h3>Experience with</h3>
-            <div class="skills-group">
-              <p class="skill-item">Java</p>
-              <p class="skill-item">Springboot</p>
-              <p class="skill-item">React JS</p>
-            </div>
+              <div class="skills-table">
+                <table>
+                  <tr>
+                    <td><i class="fa-brands fa-java fa-2xl"></i></td>
+                    <td><i class="fa-brands fa-react fa-2xl"></i></td>
+                    <td><i class="fa-brands fa-html5 fa-2xl"></i></td>
+                    <td><i class="fa-brands fa-css3-alt fa-2xl"></i></td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa-brands fa-js fa-2xl"></i></td>
+                    <td><i class="fa-brands fa-python fa-2xl"></i></td>
+                    <td><i class="fa-brands fa-git-alt fa-2xl"></i></td>
+                    <td><i class="fa-solid fa-leaf fa-2xl"></i></td>
+                  </tr>
+                </table>
+              </div>
         </div>
     </section>
     <h2 id="project" class="section-heading">Projects</h2>
@@ -91,5 +102,64 @@
         <i class="fa-brands fa-youtube fa-2xl"></i>
       </div>
       </section>
+
+      <section id="footer">
+        <p>© 2023 hpangs. All rights reserved.</p>  
+      </section>
+
+      <section id="contact-modal">
+        <div class="contact-modal-content">
+          <span class="close">&times;</span>
+          <h2>Contact Me</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <script>
+        // Get modal elements
+        const modal = document.getElementById('contact-modal');
+        const getInTouchBtn = document.querySelector('#contact-details button:first-child');
+        const closeBtn = document.querySelector('.close');
+        const contactForm = document.querySelector('#contact-modal form');
+
+        // Open modal when clicking "Get In Touch"
+        getInTouchBtn.addEventListener('click', () => {
+          modal.style.display = 'block';
+        });
+
+        // Close modal when clicking (X)
+        closeBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+
+        // Handle form submission
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(contactForm);
+          const data = Object.fromEntries(formData);
+          
+          // You can add your form submission logic here
+          console.log('Form submitted:', data);
+          
+          // Clear form and close modal
+          contactForm.reset();
+          modal.style.display = 'none';
+        });
+      </script>
   </body>
 </html>
