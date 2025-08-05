@@ -413,3 +413,12 @@ h2 {
     margin-top: 10px;
     width: fit-content;
 }
+
+#footer p{
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
