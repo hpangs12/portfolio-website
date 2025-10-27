@@ -202,7 +202,7 @@ h2 {
     font-family: "Poppins", sans-serif;
 }
 
-#contact-section a::before{
+#contact-section > a::before{
     content: "Email ID: ";
     color: crimson;
 }
