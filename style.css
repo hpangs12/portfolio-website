@@ -123,6 +123,15 @@ h2 {
     font-size: 1.8rem;
 }
 
+.hover-effect {
+  color: black;
+}
+
+.hover-effect:hover {
+  color: red;
+  cursor: pointer;
+}
+
 .project-item{
     max-width: 300px;
     border-radius: 10px;
