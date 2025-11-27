@@ -149,26 +149,29 @@
         // Handle form submission
         contactForm.addEventListener('submit', async (e) => {
           e.preventDefault();
-          const contactForm = document.querySelector('#contact-modal form');
+          // contactForm is already defined above; convert its FormData to a plain object
           const formData = new FormData(contactForm);
+          const payload = Object.fromEntries(formData.entries());
           try {
-              const res = await fetch('https://portfolio-backend-xx9p.onrender.com/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-              });
-              const json = await res.json();
-              if (res.ok && json.ok) {
-                alert('Message sent — thank you.');
-                contactForm.reset();
-                modal.style.display = 'none';
-              } else {
-                alert('Failed to send. Try again later.');
-              }
-            } catch (err) {
-              console.error(err);
-              alert('Network error — try again later.');
+            const res = await fetch('https://portfolio-backend-xx9p.onrender.com/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const json = await res.json();
+            if (res.ok && json.ok) {
+              alert('Message sent — thank you.');
+              contactForm.reset();
+              modal.style.display = 'none';
+              console.log('Server response:', json);
+            } else {
+              console.error('Server response:', json);
+              alert('Failed to send. Try again later.');
             }
+          } catch (err) {
+            console.error(err);
+            alert('Network error — try again later.');
+          }
         });
       </script>
   </body>
