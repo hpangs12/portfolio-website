@@ -147,17 +147,28 @@
         });
 
         // Handle form submission
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
           e.preventDefault();
+          const contactForm = document.querySelector('#contact-modal form');
           const formData = new FormData(contactForm);
-          const data = Object.fromEntries(formData);
-          
-          // You can add your form submission logic here
-          console.log('Form submitted:', data);
-          
-          // Clear form and close modal
-          contactForm.reset();
-          modal.style.display = 'none';
+          try {
+              const res = await fetch('https://portfolio-backend-xx9p.onrender.com/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+              });
+              const json = await res.json();
+              if (res.ok && json.ok) {
+                alert('Message sent — thank you.');
+                contactForm.reset();
+                modal.style.display = 'none';
+              } else {
+                alert('Failed to send. Try again later.');
+              }
+            } catch (err) {
+              console.error(err);
+              alert('Network error — try again later.');
+            }
         });
       </script>
   </body>
