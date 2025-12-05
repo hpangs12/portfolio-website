@@ -399,6 +399,7 @@ h2 {
     background-color: transparent;
 }
 
+
 .contact-modal-content input,
 .contact-modal-content textarea {
     width: 100%;
@@ -431,3 +432,121 @@ h2 {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
 }
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* CV Modal Styles */
+#cv-section {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    overflow: auto;
+    padding: 2rem 0;
+}
+
+
+.cv-modal-content {
+    background: #1a1a1a;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 1.5px solid #333;
+    margin: 0 auto;
+    max-width: 700px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    position: relative;
+}
+
+#close-cv-btn {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    font-size: 2rem;
+    color: #e767ec;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.cv-modal-content *{
+    background-color: inherit;
+}
+
+#cv-intro-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#cv-intro-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: #ffffff;
+}
+#cv-intro-section p {
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+    color: #bbb;
+}
+#cv-intro-section a {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+#cv-exp-section, #skills, #cv-projects-section {
+    margin-bottom: 2rem;
+}
+#cv-exp-section h4, #skills h4, #cv-projects-section h4 {
+    font-size: 1.2rem;
+    color: #e767ec;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+#cv-exp-section strong{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+#cv-exp-section p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #e767ec;
+    font-weight: 600;
+}
+#cv-exp-section ul, #skills ul, #cv-projects-section ul {
+    margin-left: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+#cv-exp-section li, #skills li, strong, #cv-projects-section li {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #ccc;
+}
+#cv-projects-section strong, a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+#cv-projects-section ul ul {
+    margin-left: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+#cv-interests-section {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+

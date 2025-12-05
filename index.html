@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website | hpangs</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/5776b79d7c.js" crossorigin="anonymous"></script>  
+    <script src="https://kit.fontawesome.com/5776b79d7c.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <section id="mobile-nav">
@@ -30,8 +31,8 @@
           <p style="font-size: 1.2rem; color: slategray; line-height: 1.6;">Hi! I'm a fullstack developer with 3+ years of experience, specializing in Spring Boot and ReactJS.</p>
         </div>
         <div id="contact-details">
-          <button>Get In Touch</button>
-          <button onclick="window.open('https://drive.google.com/file/d/1xH2Vl5ErI4GvgQ3_lztZUG4vjpJMmXUN/view?usp=sharing', '_blank');">View CV</button>
+          <button id="get-in-touch-btn">Get In Touch</button>
+          <button id="view-cv-button" onclick="showCV()">View CV</button>
         </div>
         <div>
             <h3>Experience with</h3>
@@ -121,58 +122,64 @@
           </form>
         </div>
       </section>
-
-      <script>
-        // Get modal elements
-        const modal = document.getElementById('contact-modal');
-        const getInTouchBtn = document.querySelector('#contact-details button:first-child');
-        const closeBtn = document.querySelector('.close');
-        const contactForm = document.querySelector('#contact-modal form');
-
-        // Open modal when clicking "Get In Touch"
-        getInTouchBtn.addEventListener('click', () => {
-          modal.style.display = 'block';
-        });
-
-        // Close modal when clicking (X)
-        closeBtn.addEventListener('click', () => {
-          modal.style.display = 'none';
-        });
-
-        // Close modal when clicking outside
-        window.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.style.display = 'none';
-          }
-        });
-
-        // Handle form submission
-        contactForm.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          // contactForm is already defined above; convert its FormData to a plain object
-          const formData = new FormData(contactForm);
-          const payload = Object.fromEntries(formData.entries());
-          try {
-            const res = await fetch('https://portfolio-backend-xx9p.onrender.com/api/contact', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(payload)
-            });
-            const json = await res.json();
-            if (res.ok && json.ok) {
-              alert('Message sent — thank you.');
-              contactForm.reset();
-              modal.style.display = 'none';
-              console.log('Server response:', json);
-            } else {
-              console.error('Server response:', json);
-              alert('Failed to send. Try again later.');
-            }
-          } catch (err) {
-            console.error(err);
-            alert('Network error — try again later.');
-          }
-        });
-      </script>
+      <section id="cv-section">
+        <div class="cv-modal-content">
+          <span id="close-cv-btn">&times;</span>
+          <div id="cv-intro-section">
+            <h3>Pangsatabam Henry Roy</h3>
+            <p>Software Engineer</p>
+            <p>Chandigarh, IN &bull; (+91) 8530704176</p>
+            <p>
+              <a href="mailto:pangsatabamhenry@yahoo.com">pangsatabamhenry@yahoo.com</a> &bull;
+              <a href="https://www.linkedin.com/in/pangsatabam-henry-roy" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+          </div>
+          <div id="cv-exp-section">
+            <h4>Infosys Limited - Chandigarh, IN</h4>
+            <p><strong>Systems Engineer</strong></p>
+            <ul>
+              <li>Designed and developed RESTful APIs using Java and Spring Boot.</li>
+              <li>Seamlessly integrated backend services with frontend interfaces using libraries like React.</li>
+              <li>Implemented a secure authentication service using Spring Security, JWT, etc.</li>
+              <li>Executed Unit Tests using JUnit and Mockito to validate code logic and ensure quality.</li>
+              <li>Versioned and maintained code leveraging tools like Git and Bitbucket for better collaboration.</li>
+            </ul>
+          </div>
+          <div id="skills">
+            <h4>Skills</h4>
+            <ul>
+              <li><strong>Languages & Frameworks:</strong> Java, Spring Boot, Hibernate, Spring Security, Spring Cloud</li>
+              <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, MaterialUI, Javascript/TypeScript, React.js</li>
+              <li><strong>Messaging and Monitoring:</strong> Apache Kafka, RabbitMQ, Splunk</li>
+              <li><strong>Databases:</strong> MySQL, MongoDB (SQL & NoSQL)</li>
+              <li><strong>Testing:</strong> Junit, Mockito, TestNG</li>
+              <li><strong>DevOps and Cloud:</strong> Docker, AWS, Git, Maven</li>
+              <li><strong>Certifications:</strong> AWS Certified Cloud Practitioner (Valid Oct 2027)</li>
+            </ul>
+          </div>
+          <div id="cv-projects-section">
+            <h4>Projects</h4>
+            <ul>
+              <li>
+                <strong><a href="https://github.com/hpangs12/Ecommerce_Application" target="_blank">E-Commerce Application</a>:</strong>
+                <ul>
+                  <li>A mini e-commerce website with functionalities like searching and browsing products, adding to cart, checkout, and product reviews.</li>
+                  <li>Implemented a microservice-based backend with discovery service, load balancers, circuit breakers, and API gateway.</li>
+                  <li><strong>Tech Stack:</strong> Java, Spring Boot, React.js, MySQL, MongoDB, Spring Cloud, Netflix OSS.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>M-Social Social App:</strong>
+                <ul>
+                  <li>A mini social networking website inspired by popular social media platforms.</li>
+                  <li>Implemented a monolithic backend using Java and Spring Boot.</li>
+                  <li><strong>Tech Stack:</strong> Java, Spring Boot, React.js, MySQL, MongoDB.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div id="cv-interests-section"></div>
+        </div>
+      </section>
   </body>
 </html>
