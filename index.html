@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website | hpangs</title>
+    <title>Henry Pangsatabam | Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/5776b79d7c.js" crossorigin="anonymous"></script>
     <script src="./script.js" defer></script>
@@ -28,7 +29,7 @@
         <div id="home-about">
           <img src="./img/developer.png" alt="Profile Image">
           <h2>I <span style="color: rgba(231, 103, 236, 0.8);">work</span> and <span style="color: rgba(231, 103, 236, 0.8);">live</span> in <span style="color: rgba(189, 244, 51, 0.8);">Java!</span></h2></div>
-          <p style="font-size: 1.2rem; color: slategray; line-height: 1.6;">Hi! I'm a fullstack developer with 3+ years of experience, specializing in Spring Boot and ReactJS.</p>
+          <p style="font-size: 1.2rem; color: slategray; line-height: 1.6;">Hi! I'm a Full-Stack Developer with 3+ Years on the Machine. <br/>I speak fluent Java and I'm obsessed with debugging! 😊</p>
         </div>
         <div id="contact-details">
           <button id="get-in-touch-btn">Get In Touch</button>
@@ -57,24 +58,32 @@
     <h2 id="project" class="section-heading">Projects</h2>
     <section id="project-section">
       <div class="project-item">
+        <p class="project-item-type">AGENTIC AI</p>
+        <img class="project-thumbnail" src="./img/ai-agent.jpg"/>
+        <div class="project-details">
+          <p>Python + LangGraph/OpenAI</p>
+          <p class="hover-effect">AI Code Agent</p>
+        </div>
+      </div>
+      <div class="project-item">
         <p class="project-item-type">FULL STACK</p>
-        <img class="project-thumbnail" src="./img/project-thumbnail-1.jpg"/>
+        <img class="project-thumbnail" src="./img/ai-game.jpg"/>
+        <div class="project-details">
+          <p>Springboot + ReactJS + AI</p>
+          <p class="hover-effect">Game Recommendation Engine</p>
+        </div>
+      </div>
+      <div class="project-item">
+        <p class="project-item-type">FULL STACK</p>
+        <img class="project-thumbnail" src="./img/ecommerce.png"/>
         <div class="project-details">
           <p>Springboot + ReactJS</p>
           <p class="hover-effect" onclick="window.open('https://github.com/hpangs12/Ecommerce_Application', '_blank')">E-Commerce Website</p>
         </div>
       </div>
       <div class="project-item">
-        <p class="project-item-type">Front-End</p>
-        <img class="project-thumbnail" src="./img/project-thumbnail-2.jpg"/>
-        <div class="project-details">
-          <p>HTML + CSS + JS</p>
-          <p class="hover-effect">Adopt a Pet</p>
-        </div>
-      </div>
-      <div class="project-item">
         <p class="project-item-type">FULL STACK</p>
-        <img class="project-thumbnail" src="./img/project-thumbnail-3.jpg"/>
+        <img class="project-thumbnail" src="./img/cshub.jpg"/>
         <div class="project-details">
           <p>LAMP</p>
           <p class="hover-effect">CSGOHub</p>
@@ -85,26 +94,25 @@
     <section id="experience-section">
       <div class="exp-item">
         <div class="exp-name">
-          <img src="./img/exp-thumbnail-1.png" alt="exp-logo">
+          <img src="./img/infy-logo.png" alt="exp-logo">
           <h4>Systems Engineer at Infosys Limited</h4>
         </div>
-        <div class="exp-desc">As part of my role here, I have worked with various technologies such as Java, Springboot, ReactJS, HTML, CSS, JS, Python, etc. I have worked in domains like back-end development, front-end development, unit testing, etc. I have an excellent grasp on the concepts concerning the technologies mentioned.</div>
+        <div class="exp-desc">I have successfully developed solutions using Java, Spring Boot, ReactJS, HTML, CSS, JavaScript, Python, and Agentic AI across multiple domains including back-end architecture, front-end engineering, and automated testing, with a solid grasp of underlying principles.</div>
       </div>
     </section>
     <h2 id="contact" class="section-heading">Contact</h2>
     <section id="contact-section">
-      <p>Seasoned Full Stack Software Engineer with over 3 years of hands-on experience in designing
-        and implementing robust, scalable, and innovative web solutions. </p>
+      <p>Ready to build something amazing? I'm a full-stack engineer passionate about creating robust, scalable web solutions. Let's connect and collaborate!</p>
       <a href="mailto:pangsatabamhenry@yahoo.com">pangsatabamhenry@yahoo.com</a>
       <div>
-        <a href="https://www.instagram.com/henry_pangsatabam" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-        <a href="https://github.com/hpangs12" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-        <a href="https://www.youtube.com/HenryPangsatabam" target="_blank"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+        <a href="https://www.instagram.com/henry_pangsatabam" target="_blank" title="Instagram"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="https://github.com/hpangs12" target="_blank" title="GitHub"><i class="fa-brands fa-github fa-2xl"></i></a>
+        <a href="https://www.youtube.com/HenryPangsatabam" target="_blank" title="YouTube"><i class="fa-brands fa-youtube fa-2xl"></i></a>
       </div>
       </section>
 
       <section id="footer">
-        <p>© 2023 hpangs. All rights reserved.</p>  
+        <p>© <script>`${document.write(new Date().getFullYear())}`</script> hpangs12. All rights reserved.</p>  
       </section>
 
       <section id="contact-modal">
@@ -153,7 +161,7 @@
               <li><strong>Messaging and Monitoring:</strong> Apache Kafka, RabbitMQ, Splunk</li>
               <li><strong>Databases:</strong> MySQL, MongoDB (SQL & NoSQL)</li>
               <li><strong>Testing:</strong> Junit, Mockito, TestNG</li>
-              <li><strong>DevOps and Cloud:</strong> Docker, AWS, Git, Maven</li>
+              <li><strong>DevOps and Cloud:</strong> Jenkins, Docker, AWS, Git, Maven</li>
               <li><strong>Certifications:</strong> AWS Certified Cloud Practitioner (Valid Oct 2027)</li>
             </ul>
           </div>
@@ -161,19 +169,30 @@
             <h4>Projects</h4>
             <ul>
               <li>
+                <strong>AI Code Agent:</strong>
+                <ul>
+                  <li>An AI pair programmer which can perform Agentic operations in generating/modifying programming code for creating new files or debugging errors with GitHub Copilot-like diff for the changes.</li>
+                  <li>This agent is still under early development. Please Stay Tuned!</li>
+                  <li><strong>Tech Stack:</strong> Python, LangChain, LangGraph, OpenRouter, OpenAI, VSCode.</li>
+                </ul>
+              </li>
+              <br/>
+              <li>
+                <strong>Game Recommender App:</strong>
+                <ul>
+                  <li>A full stack Recommendation app which recommends games to gamers based on a specific game/genre or according to the games they've enjoyed in the past. </li>
+                  <li>Initial release will be based on existing game datasets and the user preferences collected throughout the interactions with the specific user, i.e., the backend will purely handle the analysis logic.</li>
+                  <li>Future Plans include integration with an LLM and implement AI based recommendation.</li>
+                  <li><strong>Tech Stack:</strong> Java, Spring Boot, React.js, MySQL, MongoDB.</li>
+                </ul>
+              </li>
+              <br/>
+              <li>
                 <strong><a href="https://github.com/hpangs12/Ecommerce_Application" target="_blank">E-Commerce Application</a>:</strong>
                 <ul>
                   <li>A mini e-commerce website with functionalities like searching and browsing products, adding to cart, checkout, and product reviews.</li>
                   <li>Implemented a microservice-based backend with discovery service, load balancers, circuit breakers, and API gateway.</li>
                   <li><strong>Tech Stack:</strong> Java, Spring Boot, React.js, MySQL, MongoDB, Spring Cloud, Netflix OSS.</li>
-                </ul>
-              </li>
-              <li>
-                <strong>M-Social Social App:</strong>
-                <ul>
-                  <li>A mini social networking website inspired by popular social media platforms.</li>
-                  <li>Implemented a monolithic backend using Java and Spring Boot.</li>
-                  <li><strong>Tech Stack:</strong> Java, Spring Boot, React.js, MySQL, MongoDB.</li>
                 </ul>
               </li>
             </ul>
